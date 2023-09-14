@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Warren Dubery (wardu)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "qiskit": "^0.9.0"
+  }
 }
