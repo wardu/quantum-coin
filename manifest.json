@@ -1,6 +1,12 @@
 {
   "name": "Quantum Coin Toss",
   "version": "0.1.0",
+  "icons": {
+    "16": "favicon.ico",
+    "32": "favicon.ico",
+    "48": "favicon.ico",
+    "128": "favicon.ico"
+  },
   "description": "A Chrome browser extension that provides the results of a coin toss (heads or tails). Randomisation is powered by quantum physics.",
   "manifest_version": 3,
   "author": "Warren Dubery",
