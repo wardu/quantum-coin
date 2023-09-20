@@ -1,4 +1,7 @@
-// import { algo } from "/node_modules/qiskit/index.js";
+//@ts-check
+
+const resultText = document.getElementById("resultText");
+const coinImage = document.getElementById("coinImage");
 
 function headsOrTails() {
   const rand = Math.floor(Math.random() * 10);
@@ -13,11 +16,9 @@ function headsOrTails() {
 
 // Display the result on the page
 function updateUI(result) {
-  const resultElement = document.getElementById("result");
-  resultElement.textContent = `Result: ${result}`;
+  resultText.textContent = `Result: ${result}`;
 
-  const resultImage = document.getElementById("resultImage");
-  resultImage.src = `images/${result}.png`;
+  coinImage.src = `images/${result}.png`;
 }
 
 function flip() {
@@ -27,8 +28,7 @@ function flip() {
     flipButton.disabled = false;
   }, 1000);
 
-  let pic = document.getElementById("resultImage");
-  pic.src = "images/spinning.png";
+  coinImage.src = "images/spinning.png";
   window.setTimeout(headsOrTails, 1000);
 }
 
@@ -41,6 +41,5 @@ flipButton.addEventListener("click", flip);
 // reset button
 const resetButton = document.getElementById("resetButton");
 resetButton.addEventListener("click", () => {
-  const resultElement = document.getElementById("result");
-  resultElement.textContent = "Result: ";
+  resultText.textContent = "Result: ";
 });
